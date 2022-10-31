@@ -57,7 +57,7 @@ addproducto.addEventListener('click' , () => {
 on ( document , 'click' , '.btnborrarp' , e =>{
     const fila = e.target.parentNode.parentNode.parentNode
     const id = fila.firstElementChild.innerHTML
-    alertify.confirm("This is a confirm dialog.",
+    alertify.confirm(`Seguro que quiere borrar el producto`,
         function () {
             fetch(`${url}/${id}`, {
                 method: 'DELETE'

@@ -83,7 +83,7 @@ on(document, 'click', '.btnborrarc', e => {
 let idform = 0
 
 on(document, 'click', '.btneditc', e => {
-    const fila = e.target.parentNode.parentNode.parentNode
+    const fila = e.target.parentNode.parentNode
     const idform = fila.children[0].innerHTML
     const nombre = fila.children[1].innerHTML
     const email = fila.children[2].innerHTML
