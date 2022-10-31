@@ -11,16 +11,11 @@ var conection = mysql.createConnection({
 conection.connect(function(err) {
     if (err) throw err;
     console.log("conexion establecida a la tabla clients");
-  });
+});
 
 
 
 let clients = express.Router()
-
-/*Router.get('/:id', (req, res) => {
-    res.json({id: req.params.id})
-})
-*/
 
 clients.get('/' , (req, res) => {
     conection.query("SELECT * FROM clients" ,(err , rows) =>{

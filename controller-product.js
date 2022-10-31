@@ -16,8 +16,7 @@ const formavitaminas = document.getElementById('vitamina')
 let opcion = ''
 
 
-document.getElementById('productos').addEventListener('click', () => {
-    
+document.getElementById('productos').addEventListener('click', () => {   
     let resultados = ''
     thead.innerHTML = '<tr>' + titletable.map(th => `<th>${th}</th>`).join('') + '</tr>'
     const mostrar = (productos) => {
@@ -39,7 +38,6 @@ document.getElementById('productos').addEventListener('click', () => {
     }
     addproducto.removeAttribute('hidden')
     addcliente.setAttribute('hidden' , 'hidden')
-
 
     fetch(url)
     .then(response => response.json())
@@ -81,15 +79,10 @@ on(document, 'click', '.btneditp', e => {
     const nombre = fila.children[1].innerHTML
     const precio = fila.children[2].innerHTML
     const stock = fila.children[4].innerHTML
-    let tipo =document.querySelector('input[name="radio"]:checked')
-     
+    let tipo =document.querySelector('input[name="radio"]:checked')   
     if ( fila.children[3].innerHTML == 'analgesico'){
         formanalgesico.stat
     } 
-
-
-
-
 
     nameproducto.value=nombre
     formprecio.value=precio
@@ -101,17 +94,9 @@ on(document, 'click', '.btneditp', e => {
     
 })
 
-
-
-
 formproducto.addEventListener('submit' , (e) => {
     const fila = e.target.parentNode.parentNode.parentNode
     const idform = fila.children[0].innerHTML
 })
-
-
-
-
-
 
 })()
