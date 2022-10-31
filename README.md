@@ -24,4 +24,10 @@ En el archivo .env
 - password = 'password'
 
 
+**Para correr la Api.**
+
+En el terminal estando en la carpeta del projecto 
+
+-  `npm run dev`
+
 Desarrollador : **Luis Salvador**
