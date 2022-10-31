@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <style>
+        body{
+        background-image:  url("https://c8.alamy.com/compes/2bh2xrd/diseno-de-carteles-de-farmacia-banner-para-presentacion-y-publicidad-medica-o-sanitaria-medicamentos-pildoras-capsulas-antibioticos-vitaminas-vector-2bh2xrd.jpg");
+        background-size: 60em;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> + FARMACY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+         
+    <div class="container mt-4 shadow-lg mb-5 bg-body rounded">
+        
+        <button id="clientes" type="button" class="btn btn-secondary mt-3 mb-3 rounded shadow-lg" data-bs-toggle="modal"><i class="bi bi-people"></i></button>
+        
+        
+        <button id="productos" type="button" class="btn btn-secondary mt-3 mb-3 rounded shadow-lg" data-bs-toggle="modal"><i class="bi bi-capsule"></i></button>
+        
+        <button id="addproducto" type="button" class="btn btn-primary" data-bs-toggle="modal" hidden="hidden"><i class="bi bi-capsule-pill"></i></button>
+        
+        <button id="addcliente" type="button" class="btn btn-primary" data-bs-toggle="modal" hidden="hidden"><i class="bi bi-person-plus"></i></button>
+       
+       
+       
+       
+        <table id="tablapresentacion" class="table mt-2  mb-3 rounded table-bordered table-striped">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+       
+        <table id="tablapresentacion" class="table mt-2  mb-3 rounded table-bordered table-striped">
+            <thead id="tablap">
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+        </table>
+    </div>
+
+<div class="modal fade" id="modalcliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 " id="titulomodal" >Ingrese datos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formclient">
+         
+            <div class="mb-3">
+            <label for="formformnombre" class="col-form-label" >nombre:</label>
+            <input type="text" class="form-control" id="formnombre">
+          </div>
+            <div class="mb-3">
+            <label for="formemail" class="col-form-label">email:</label>
+            <input type="text" class="form-control" id="formemail">
+          </div>
+            <div class="mb-3">
+            <label for="formphone" class="col-form-label">phone:</label>
+            <input type="text" class="form-control" id="formphone">
+          </div>
+            <div class="mb-3">
+            <label for="formci" class="col-form-label">ci:</label>
+            <input type="text" class="form-control" id="formci">
+          </div>
+         
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="modalproducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 " id="titulomodalproduct" >Ingrese datos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formproducto">
+         
+            <div class="mb-3">
+            <label for="formproducto" class="col-form-label" >producto:</label>
+            <input type="text" class="form-control" id="nameproducto">
+          </div>
+
+        <div>
+        
+            <input type="radio" name="radio" id="analgesico" value="analgesico">Analgesico</input>   
+            
+        </div>
+
+        <div>
+            
+            <input type="radio" name="radio" id="antibiotico" value="antibiotico">antibiotico</input>
+
+        </div>
+
+        <div>
+
+            <input type="radio" name="radio" id="vitamina" value="vitamina">vitamina</input>
+
+        </div>
+
+
+            <div class="mb-3">
+            <label for="formprecio" class="col-form-label">precio:</label>
+            <input type="text" class="form-control" id="formprecio">
+          </div>
+            <div class="mb-3">
+            <label for="formstock" class="col-form-label">stock:</label>
+            <input type="text" class="form-control" id="formstock">
+          </div>
+
+         
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="./controller-client.js"></script>
+    <script src="./controller-product.js"></script>
+  </body>
+</html>
